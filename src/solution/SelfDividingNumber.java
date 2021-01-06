@@ -11,8 +11,8 @@ public class SelfDividingNumber {
 		
 	}
 	
-	public List<Integer> selfDividingumbers(int left, int right) {
-		List<Integer> nums = new ArrayList<>();
+	public List<Integer> selfDividingNumbers(int left, int right) {
+        List<Integer> nums = new ArrayList<>();
 		for(int i = left; i < right; i++) {
 			if(this.isDividingNumber(i)) {
 				nums.add(i);
