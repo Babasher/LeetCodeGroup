@@ -5,7 +5,7 @@ import java.util.*;
 public class SelfDividingNumber {
 	public static void main(String[] args) {
 		SelfDividingNumber obj = new SelfDividingNumber();
-		List<Integer> nums = obj.selfDividingumbers(1, 100);
+		List<Integer> nums = obj.selfDividingNumbers(1, 22);
 		System.out.println(nums.toString());
 		
 		
@@ -18,7 +18,10 @@ public class SelfDividingNumber {
 				nums.add(i);
 			}
 		}
-		nums.add(right);
+		if(this.isDividingNumber(right)) {
+			nums.add(right);
+		}
+
 		return nums;
     }
 	
