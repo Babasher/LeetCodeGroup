@@ -10,25 +10,27 @@ public class CandiestoPeople {
 	
 	public int[] distributeCandies(int candies, int num_people) {
 		int[] result = new int[num_people];
-		
-		int candy = 1;
 		int position = 0;
-		int sum = 0;
+		int candy = 1;
 		
-		while(sum < candies) {
-			if(sum + 1 >= candies) {
-				result[position] = candies - sum;
-			} else {
+		while(candies > 0) {
+			if(candies >= candy) {
 				result[position] += candy;
-			}
-			sum += candy;
-			candy += 1;
-			position ++;
-			if(position >= num_people) {
-				position = 0;
+				candies -= candy;
+			} else {
+				result[position] += candies;
+				candies = 0;
 			}
 			
+			if(position == num_people - 1) {
+				position = -1;
+			}
+			
+			position++;
+			candy++;
 		}
+		
 		return result;
+
     }
 }
