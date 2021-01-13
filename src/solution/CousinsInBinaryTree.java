@@ -30,6 +30,7 @@ public class CousinsInBinaryTree {
 				queue.add(n.left);
 			}
 			if(n.right != null) {
+				if(n.right.val == target) return false;
 				if(n.right.val == x) {
 					target = y;
 				} else if (n.right.val == y) {
