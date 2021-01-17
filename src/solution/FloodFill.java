@@ -15,6 +15,9 @@ public class FloodFill {
 	}
 	
 	public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+		if(image == null || image.length == 0) {
+			return image;
+		}
 		if(image[sr][sc] == newColor) {
 			return image;
 		}
